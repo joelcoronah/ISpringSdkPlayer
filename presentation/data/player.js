@@ -23220,7 +23220,10 @@
             document.querySelector('.universal_mini > .bottom_panel').appendChild(document.createElement("div")).id='undoDiv_id'
             document.getElementById('undoDiv_id').appendChild(document.createElement("div")).id='labelUndoDiv_id'
             document.getElementById('labelUndoDiv_id').className="botonRetrocede"
-            //labelid = document.getElementById('labelUndoDiv_id')
+
+            document.getElementById('labelUndoDiv_id').addEventListener("click", function(e){
+                window.top.postMessage("se clickeo boton dentro de iframe");
+            });
             //comeBackWithClic(labelid,varpao)
             bandTablet==0?document.getElementById('labelUndoDiv_id').style.left="47%":document.getElementById('labelUndoDiv_id').style.left="70%"
             
