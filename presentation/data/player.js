@@ -23222,9 +23222,8 @@
             document.getElementById('labelUndoDiv_id').className="botonRetrocede"
 
             document.getElementById('labelUndoDiv_id').addEventListener("click", function(e){
-                window.top.postMessage("se clickeo boton dentro de iframe");
+                window.top.postMessage("hola iframe",document.location.origin);
             });
-            //comeBackWithClic(labelid,varpao)
             bandTablet==0?document.getElementById('labelUndoDiv_id').style.left="47%":document.getElementById('labelUndoDiv_id').style.left="70%"
             
             
@@ -39977,13 +39976,14 @@ function arrayWhile(currentTime, durationTime,currentTimePresentation){
 /**
 *   Conexion con el Api SDK
 *
-*/
+
+
 var ispringPresentationConnector = {}
 ispringPresentationConnector.register = function(player)
 { 
-    /*GetSlide*/
+    /*GetSlide
     var slidePresentation=player.presentation().slides()
-   	/*Busca el tiempo de cada una de los slide*/	
+   	/*Busca el tiempo de cada una de los slide
     slidePresentation.Mz.forEach(
         function(id){
             var slideIndexNow = slidePresentation.Mz.indexOf(id)
@@ -39993,25 +39993,8 @@ ispringPresentationConnector.register = function(player)
             arraySlidesTimes.push(slidesTimesTemp)
         }
     );    
-};
+};*/
 
-
-
-
-
-
-
-
-/*I apologize for not providing you with a response earlier.
- Here's what your developer needs to check in the js-api documentation 
- (can be found in C:\Program Files\iSpring\Suite DX 8\Player SDK\documentation\js-api or here):
-To retreive presentation progress:
-1) /documentation/js-api/ispring.presenter.presentation.slides.ISlides.html#convertTimestampToTime
-2) on the same page – look up duration() to retreive total duration of the presentation
-
-To retreive slide progress – use the ISlide Interface:
-/documentation/js-api/ispring.presenter.presentation.slides.ISlide.html
- */
    
 
 
