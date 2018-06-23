@@ -12620,6 +12620,10 @@
         if (b.visible()) {
             b.oP = a.Mz.length;
             a.Mz.push(b);
+            /*Cambios*/
+            slidesTimesTemp={"starTime":b.startTime(),
+                            "duration":b.duration()}
+            arraySlidesTimes.push(slidesTimesTemp)
             var c = b.duration(),
                 d = b.transition() ? b.transition().duration() : 0;
             a.eG += c;
@@ -39887,6 +39891,7 @@ var slidesTimesTemp={};
 var arraySlidesTimes=[];
 var varpao={};
 var labelid={};
+var playerPao={};
 /**
  * Funcion encarda de cambiar el formato del tiempo a mostrar
  */
@@ -39981,9 +39986,9 @@ function arrayWhile(currentTime, durationTime,currentTimePresentation){
 var ispringPresentationConnector = {}
 ispringPresentationConnector.register = function(player)
 { 
-    /*GetSlide
+    
     var slidePresentation=player.presentation().slides()
-   	/*Busca el tiempo de cada una de los slide
+   	
     slidePresentation.Mz.forEach(
         function(id){
             var slideIndexNow = slidePresentation.Mz.indexOf(id)
@@ -39992,7 +39997,8 @@ ispringPresentationConnector.register = function(player)
                             "duration":slideRela}
             arraySlidesTimes.push(slidesTimesTemp)
         }
-    );    
+    ); 
+     
 };*/
 
    

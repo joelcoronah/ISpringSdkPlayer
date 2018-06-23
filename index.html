@@ -23,7 +23,13 @@
               <iframe id="presentation" src="presentation/index.html"></iframe>
             </div>
                 <p id="state-indicator">Presentation is not running yet</p>
+    
+    
+    
+    
+         
     <script>
+        
         var ispringPresentationConnector = {};
 
        ispringPresentationConnector.register = function(player)
@@ -36,23 +42,31 @@
             indicator.innerHTML = "Presentation is running";
             var playercito =player.presentation().slides();
             console.log(playercito)
+            var goToAtras =player.view().playbackController().gotoTimestamp(3,0,0,0)
+            console.log(player.view().playbackController().clock().timestamp())
             }
             window.addEventListener("message", receiveMessage, false);
+            /*GetSlide*/
+            var slidePresentation=player.presentation().slides()
+   	        /*Busca el tiempo de cada una de los slide*/
+            slidePresentation.Mz.forEach(
+                function(id){
+                    var slideIndexNow = slidePresentation.Mz.indexOf(id)
+                    var slideRela=slidePresentation.getSlide(slideIndexNow).duration()
+                    slidesTimesTemp={"starTime":slidePresentation.getSlide(slideIndexNow).startTime(),
+                                    "duration":slideRela}
+                    console.log(slidesTimesTemp)
+                    arraySlidesTimes.push(slidesTimesTemp)
+                    
+                }
+            );
+            
+
         };
-       
+        
         
     </script>
           </body>
-        </html>
-    
-        
-        
-
-        
-       
-     
-  
-     
-    
+        </html>  
   </body>
 </html>
