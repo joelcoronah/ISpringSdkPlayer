@@ -39889,9 +39889,9 @@ var slideCurrent=0;
 var slideFinal=0;
 var slidesTimesTemp={};
 var arraySlidesTimes=[];
-var varpao={};
-var labelid={};
-var playerPao={};
+
+
+
 /**
  * Funcion encarda de cambiar el formato del tiempo a mostrar
  */

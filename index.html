@@ -40,30 +40,34 @@
             {
             console.log("que tals")
             indicator.innerHTML = "Presentation is running";
-            var playercito =player.presentation().slides();
-            console.log(playercito)
-            var goToAtras =player.view().playbackController().gotoTimestamp(3,0,0,0)
-            console.log(player.view().playbackController().clock().timestamp())
+           
+            //var goToAtras =player.view().playbackController().gotoTimestamp(3,0,0,0)
+            //console.log(player.view().playbackController().clock().timestamp())
+            var playercito =player.presentation().slides().convertTimestampToTime(player.view().playbackController().clock().timestamp(),true,true)
+            //console.log(player.view().playbackController().clock().timestamp())
+            
+            //console.log(playercito)
+            rollbackTenSeconds(playercito,player)
             }
             window.addEventListener("message", receiveMessage, false);
-            /*GetSlide*/
-            var slidePresentation=player.presentation().slides()
-   	        /*Busca el tiempo de cada una de los slide*/
-            slidePresentation.Mz.forEach(
-                function(id){
-                    var slideIndexNow = slidePresentation.Mz.indexOf(id)
-                    var slideRela=slidePresentation.getSlide(slideIndexNow).duration()
-                    slidesTimesTemp={"starTime":slidePresentation.getSlide(slideIndexNow).startTime(),
-                                    "duration":slideRela}
-                    console.log(slidesTimesTemp)
-                    arraySlidesTimes.push(slidesTimesTemp)
-                    
-                }
-            );
-            
-
-        };
         
+        
+            
+        };
+        function rollbackTenSeconds(timeNow,playerx){
+                console.log('funcion retroceder')
+                if(timeNow>3){
+                    var timecito=playerx.presentation().slides().convertTimeToTimestamp(timeNow-3,true)
+                    var goBackten=playerx.view().playbackController().gotoTimestamp(timecito.Nb,timecito.Jr,timecito.gh,false)
+                    console.log(goBackten)
+                    console.log(timecito)
+                }else{
+                    playerx.view().playbackController().gotoFirstSlide(true)
+                }
+        
+            }
+   
+
         
     </script>
           </body>
