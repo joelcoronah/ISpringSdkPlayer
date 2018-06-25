@@ -2945,11 +2945,16 @@
                 if (2 == d.length) {
                     try {
                         var e = decodeURIComponent(d[0].replace(/\+/g, " "))
+                        console.log('es e')
+                        console.log(e)
                     } catch (h) {
                         e = d[0]
                     }
                     try {
+                        
                         var g = decodeURIComponent(d[1].replace(/\+/g, " "))
+                        console.log('es g')
+                        console.log(g)
                     } catch (h) {
                         g = d[1]
                     }
@@ -5329,6 +5334,8 @@
                     g = b ? .01 : .5;
                 e > g && !b && !this.Tc && !c ? this.uz(a) : Math.abs(e) > g && d.qA(a);
                 this.lb && !this.yb.playing() && this.yb.play()
+                console.log('yb ps')
+                console.log(this.yb)
             }
     };
     f.play = function(a) {
@@ -5380,7 +5387,7 @@
     vl.prototype.type = function() {
         return this.sa
     };
-
+    /*beta */
     function wl(a) {
         var b = [];
         if (a = a.match(/<source.+?>/g))
@@ -6258,6 +6265,8 @@
         /*LO ENCONTRE*/
         if (Cm(this)) {
             this.lb = !0;
+            console.log('fuente')
+            console.log(this)
             Tg && "VIDEO" == M(this).tagName && this.src() && !M(this).src && (M(this).src = this.src());
             var a = M(this).play();
             a && a["catch"](function(a) {
@@ -6302,6 +6311,7 @@
     f.kv = function() {
         !this.Kc && this.src() && (this.Kc = this.src(), this.Ug.src = "about:blank")
     };
+    /**beta */
     f.Sv = function() {
         this.Kc && (M(this).src = this.Kc, this.Kc = void 0)
     };
@@ -6642,6 +6652,7 @@
         this.UN && Km(this);
         this.yi.F(this)
     };
+   
     f.src = function() {
         return this.G.src()
     };
