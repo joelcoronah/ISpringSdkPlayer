@@ -28,49 +28,7 @@
     
     
          
-    <script>
-        
-        var ispringPresentationConnector = {};
-
-       ispringPresentationConnector.register = function(player)
-        {
-            var indicator = document.getElementById("state-indicator");
-            
-            function receiveMessage(event)
-            {
-            console.log("que tals")
-            indicator.innerHTML = "Presentation is running";
-           
-            //var goToAtras =player.view().playbackController().gotoTimestamp(3,0,0,0)
-            //console.log(player.view().playbackController().clock().timestamp())
-            var playercito =player.presentation().slides().convertTimestampToTime(player.view().playbackController().clock().timestamp(),true,true)
-            //console.log(player.view().playbackController().clock().timestamp())
-            
-            //console.log(playercito)
-            rollbackTenSeconds(playercito,player)
-            }
-            window.addEventListener("message", receiveMessage, false);
-        
-        
-            
-        };
-        function rollbackTenSeconds(timeNow,playerx){
-                console.log('funcion retroceder')
-                if(timeNow>3){
-                    var timecito=playerx.presentation().slides().convertTimeToTimestamp(timeNow-3,true)
-                    var goBackten=playerx.view().playbackController().gotoTimestamp(timecito.Nb,timecito.Jr,timecito.gh,false)
-                    console.log(goBackten)
-                    console.log(timecito)
-                }else{
-                    playerx.view().playbackController().gotoFirstSlide(true)
-                }
-        
-            }
-   
-
-        
-    </script>
+                <script src="presentation/data/modify.js"></script>
           </body>
         </html>  
-  </body>
-</html>
+ 
