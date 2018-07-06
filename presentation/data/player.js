@@ -23219,9 +23219,17 @@
             
             document.getElementsByClassName('top_panel')[0].appendChild(document.querySelector('.universal_mini > .bottom_panel .next.component_container'))
             document.getElementsByClassName('top_panel')[0].appendChild(document.querySelector('.universal_mini > .bottom_panel .prev.component_container'))
-            changeVideo()
             videoDiv=document.querySelector('.universal_mini .video_container video')
-            videoDiv.ontimeupdate=function(){displayVideo()}
+           
+            videoDiv.ontimeupdate=function(){displayVideo()
+                    if(videoDiv.paused){
+                        document.getElementById('timeDiv_id').onclick=function(){
+                            changeTimeNow(bandClic)
+                            bandClic=bandClic==0?1:0;
+                        }
+                    }
+            }
+            
             if(bandTablet==0){
                 document.querySelector('.universal_mini > .top_panel .show_video.component_container').style.display="none"
             }else{
@@ -39898,13 +39906,14 @@ var bandPhone=0;
 var bandTablet=0;
 var slideCurrent=0;
 var slideFinal=0;
+var videoPause=0;
 var slidesTimesTemp={};
 var arraySlidesTimes=[];
 
 
 
 /**
- * Funcion encarda de cambiar el formato del tiempo a mostrar
+ * Funcion encargada de cambiar el formato del tiempo a mostrar
  */
 function getNewTimeDisplay(time){
     if(isNaN(time))
@@ -39963,7 +39972,8 @@ function changePresentation(){
 function displayVideo(){
     changeTimeNow(bandClic)
     getSlideTime(videoDiv.currentTime)
-    document.getElementById('timeDiv_id').onclick=function() {bandClic=bandClic==0?1:0} 
+    document.getElementById('timeDiv_id').onclick=function() {
+        bandClic=bandClic==0?1:0} 
 }
 
 /**
