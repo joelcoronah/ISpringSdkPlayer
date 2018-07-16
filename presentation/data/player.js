@@ -23194,7 +23194,15 @@
             this.xm.F(this.Qf - a);
              /*ACÁ LOS CAMBIOS */
     if( /Android|webOS|iPhone|iPad|iPad Mini 2|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-       
+        var landscape=0;
+        var portrait=0;
+        if (window.matchMedia("(orientation: portrait)").matches) {
+            portrait=1;
+        }
+
+        if (window.matchMedia("(orientation: landscape)").matches) {
+           landscape=1;
+        }
         if(phoneWidth<767){
             document.getElementById('playerView').childNodes[1].style.top="50%"
             document.getElementsByClassName('universal_mini')[0].childNodes[1].style.opacity='1'
@@ -23213,10 +23221,7 @@
             document.querySelector('.universal_mini > .bottom_panel .play.component_container').style.right='0'
             document.querySelector('.universal_mini > .bottom_panel .progress').style.background="#444444"
             document.querySelector('.universal_mini > .top_panel .slide_info').style.fontFamily="Roboto, sans-serif"
-            document.querySelector('.universal_mini > .top_panel .slide_info').style.fontWeight="unset"
-
-            
-            
+            document.querySelector('.universal_mini > .top_panel .slide_info').style.fontWeight="unset" 
             document.getElementsByClassName('top_panel')[0].appendChild(document.querySelector('.universal_mini > .bottom_panel .next.component_container'))
             document.getElementsByClassName('top_panel')[0].appendChild(document.querySelector('.universal_mini > .bottom_panel .prev.component_container'))
             videoDiv=document.querySelector('.universal_mini .video_container video')
@@ -23247,12 +23252,12 @@
             document.getElementById('labelUndoDiv_id').addEventListener("click", function(e){
                 window.top.postMessage("hola iframe",document.location.origin);
             });
-            bandTablet==0?document.getElementById('labelUndoDiv_id').style.left="47%":document.getElementById('labelUndoDiv_id').style.left="70%"
             
             
             document.getElementById('timeDiv_id').appendChild(document.createElement("span")).id='labelTimeDiv_id'
             document.getElementById('timeDiv_id').appendChild(document.createElement("span")).id='labelTimeDivLast_id'
             document.getElementById('timeDiv_id').style.position="absolute"
+            bandTablet==0?document.getElementById('labelUndoDiv_id').style.left="47%":document.getElementById('labelUndoDiv_id').style.left="70%"
             bandTablet==1?document.getElementById('timeDiv_id').style.paddingTop="2%":document.getElementById('timeDiv_id').style.paddingTop="3.5%"
             bandTablet==1?document.getElementById('timeDiv_id').style.paddingLeft="3%":document.getElementById('timeDiv_id').style.paddingLeft="5%" 
             document.getElementById('timeDiv_id').style.width="114px"
