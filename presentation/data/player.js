@@ -23203,7 +23203,7 @@
         if (window.matchMedia("(orientation: landscape)").matches) {
            landscape=1;
         }
-        if(phoneWidth<767){
+        if(phoneWidth<767 && portrait==1 ){
             //phone
             document.getElementById('playerView').childNodes[1].style.top="50%"
             document.getElementsByClassName('universal_mini')[0].childNodes[1].style.opacity='1'
