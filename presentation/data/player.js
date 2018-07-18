@@ -23220,32 +23220,23 @@
             if(bandTablet==0 && portrait==1){
                 //phone like phone
                 document.querySelector('.universal_mini > .top_panel .show_video.component_container').style.display="none"
-                document.getElementById('labelUndoDiv_id').style.left="55%"
-                document.getElementById('timeDiv_id').style.paddingTop="3.5%"
-                document.getElementById('timeDiv_id').style.paddingLeft="5%"
+               
             }else if(bandTablet==1 && landscape==1){
                 //tablet like tablet
                 document.getElementsByClassName('bottom_panel')[0].appendChild(document.querySelector('.universal_mini > .top_panel .show_video.component_container'))
                 document.querySelector('.universal_mini > .bottom_panel .show_video.component_container').style.left="unset"
-                document.querySelector('.universal_mini > .bottom_panel .show_video.component_container').style.right="45%" 
-                document.getElementById('labelUndoDiv_id').style.left="70%"
-                document.getElementById('timeDiv_id').style.paddingTop="2%"
-                document.getElementById('timeDiv_id').style.paddingLeft="3%"
+                document.querySelector('.universal_mini > .bottom_panel .show_video.component_container').style.right="45.25%" 
+               
             }else if (bandTablet==0 && landscape==1){
                 //phone like tablet
                 document.getElementsByClassName('bottom_panel')[0].appendChild(document.querySelector('.universal_mini > .top_panel .show_video.component_container'))
                 document.querySelector('.universal_mini > .bottom_panel .show_video.component_container').style.left="unset"
-                document.querySelector('.universal_mini > .bottom_panel .show_video.component_container').style.right="45%" 
-                document.getElementById('labelUndoDiv_id').style.left="70%"
-                document.getElementById('timeDiv_id').style.paddingTop="2%"
-                document.getElementById('timeDiv_id').style.paddingLeft="3%"
+                document.querySelector('.universal_mini > .bottom_panel .show_video.component_container').style.right="45.25%" 
+              
 
             }else if(bandTablet==1 && portrait==1){
                 //tablet like phone
                 document.querySelector('.universal_mini > .top_panel .show_video.component_container').style.display="none"
-                document.getElementById('labelUndoDiv_id').style.left="47%"
-                document.getElementById('timeDiv_id').style.paddingTop="3.5%"
-                document.getElementById('timeDiv_id').style.paddingLeft="5%"
             }
             bandCond=1;
         }  
@@ -39944,21 +39935,54 @@ function applyGeneral(){
             
             document.querySelector('.universal_mini > .bottom_panel').appendChild(document.createElement("div")).id='undoDiv_id'
             document.getElementById('undoDiv_id').appendChild(document.createElement("div")).id='labelUndoDiv_id'
+            document.getElementById('undoDiv_id').style.padding="1px 6px"
+            document.getElementById('undoDiv_id').style.width="45px"
+            document.getElementById('undoDiv_id').style.height="44px"
+            document.getElementById('undoDiv_id').style.position="absolute"
+            document.getElementById('undoDiv_id').style.right="67px"
+            /*------------------------------------------------------------- */
             document.getElementById('labelUndoDiv_id').className="botonRetrocede"
-
+            document.getElementById('labelUndoDiv_id').style.left="0%"
+            document.getElementById('labelUndoDiv_id').style.marginTop="13px"
+            document.getElementById('labelUndoDiv_id').style.marginBottom="13px"
+            document.getElementById('labelUndoDiv_id').style.marginLeft="20px"
+            document.getElementById('labelUndoDiv_id').style.marginRight="20px"
             document.getElementById('labelUndoDiv_id').addEventListener("click", function(e){
                 window.top.postMessage("hola iframe",document.location.origin);
             });
-            
-            
+            /*------------------------------------------------------------- */
             document.getElementById('timeDiv_id').appendChild(document.createElement("span")).id='labelTimeDiv_id'
             document.getElementById('timeDiv_id').appendChild(document.createElement("span")).id='labelTimeDivLast_id'
             document.getElementById('timeDiv_id').style.position="absolute"
             document.getElementById('timeDiv_id').style.width="114px"
             document.getElementById('timeDiv_id').style.height="46px"
+            document.getElementById('timeDiv_id').style.paddingTop="1px"
+            document.getElementById('timeDiv_id').style.paddingBottom="1px"
+            document.getElementById('timeDiv_id').style.paddingLeft="6px"
+            document.getElementById('timeDiv_id').style.paddingRight="6px"
+            /*---------------------------------------------------------------- */
+            document.getElementById('labelTimeDiv_id').style.position="absolute"
+            document.getElementById('labelTimeDiv_id').style.right="0px"
+            document.getElementById('labelTimeDiv_id').style.left="0px"
+            document.getElementById('labelTimeDiv_id').style.top="0px"
+            document.getElementById('labelTimeDiv_id').style.bottom="0px"
+            document.getElementById('labelTimeDiv_id').style.marginTop="13px"
+            document.getElementById('labelTimeDiv_id').style.marginBottom="13px"
+            document.getElementById('labelTimeDiv_id').style.marginLeft="18px"
+            document.getElementById('labelTimeDiv_id').style.marginRight="18px"
+            /*---------------------------------------------------------------- */
+            document.getElementById('labelTimeDivLast_id').style.position="absolute"
+            document.getElementById('labelTimeDivLast_id').style.right="0px"
+            document.getElementById('labelTimeDivLast_id').style.left="0px"
+            document.getElementById('labelTimeDivLast_id').style.top="0px"
+            document.getElementById('labelTimeDivLast_id').style.bottom="0px"
+            document.getElementById('labelTimeDivLast_id').style.marginTop="13px"
+            document.getElementById('labelTimeDivLast_id').style.marginBottom="13px"
+            document.getElementById('labelTimeDivLast_id').style.marginLeft="58px"
+            document.getElementById('labelTimeDivLast_id').style.marginRight="18px"
+            
             document.getElementById('labelTimeDiv_id').style.fontFamily="Roboto, sans-serif"
             document.getElementById('labelTimeDivLast_id').style.fontFamily="Roboto, sans-serif"
-            
 }
 /**
  * Funcion encargada de cambiar de tiempo de video o tiempo diapositivita
