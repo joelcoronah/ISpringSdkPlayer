@@ -23194,6 +23194,7 @@
             this.xm.F(this.Qf - a);
              /*ACÁ LOS CAMBIOS */
     if( /Android|webOS|iPhone|iPad|iPad Mini 2|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
         var landscape=0;
         var portrait=0;
         if (window.matchMedia("(orientation: portrait)").matches) {
@@ -23219,7 +23220,7 @@
             if(bandTablet==0 && portrait==1){
                 //phone like phone
                 document.querySelector('.universal_mini > .top_panel .show_video.component_container').style.display="none"
-                document.getElementById('labelUndoDiv_id').style.left="47%"
+                document.getElementById('labelUndoDiv_id').style.left="55%"
                 document.getElementById('timeDiv_id').style.paddingTop="3.5%"
                 document.getElementById('timeDiv_id').style.paddingLeft="5%"
             }else if(bandTablet==1 && landscape==1){
@@ -39928,7 +39929,9 @@ function applyGeneral(){
             document.getElementsByClassName('top_panel')[0].appendChild(document.querySelector('.universal_mini > .bottom_panel .prev.component_container'))
             videoDiv=document.querySelector('.universal_mini .video_container video')
            
-            videoDiv.ontimeupdate=function(){displayVideo()
+            videoDiv.ontimeupdate=function(){
+                    window.onresize=function(){location.reload();}
+                    displayVideo()
                     if(videoDiv.paused){
                         document.getElementById('timeDiv_id').onclick=function(){
                         changeTimeNow(bandClic)
