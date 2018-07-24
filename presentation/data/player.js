@@ -23212,9 +23212,7 @@
             //document.getElementsByClassName('universal_mini')[0].childNodes[2].style.marginBottom="0%"
             document.getElementsByClassName('video_container')[0].style.position="absolute"
             document.getElementById('playerView').childNodes[1].style.position="absolute"
-            document.getElementsByClassName('video_container')[0].style.top="-13%"
-           
-            document.getElementById('playerView').childNodes[1].style.top="50%"
+            setVideoSlidePosition();
             //document.getElementsByClassName('universal_mini')[0].childNodes[1].childNodes[1].style.marginBottom="50%"
             //document.getElementsByClassName('universal_mini')[0].childNodes[1].childNodes[1].style.marginTop="50%"
             bandPhone=1;
@@ -23227,6 +23225,7 @@
             if(bandTablet==0 && portrait==1){
                 //phone like phone
                 document.querySelector('.universal_mini > .top_panel .show_video.component_container').style.display="none"
+                setVideoSlidePosition();
                
             }else if(bandTablet==1 && landscape==1){
                 //tablet like tablet
@@ -23244,6 +23243,7 @@
             }else if(bandTablet==1 && portrait==1){
                 //tablet like phone
                 document.querySelector('.universal_mini > .top_panel .show_video.component_container').style.display="none"
+                setVideoSlidePosition();
             }
             bandCond=1;
         }  
@@ -39886,6 +39886,7 @@ canvg = function() {
  * Variables globales a utilizar
  */
 var phoneWidth=window.innerWidth;
+var phoneHeight=window.innerHeight;
 var bandClic=0;
 var bandCond=0;
 var bandPhone=0;
@@ -40057,6 +40058,20 @@ function arrayWhile(currentTime, durationTime,currentTimePresentation){
             slideCurrent=parseFloat(currentTimePresentation-currentTime)
             slideFinal=parseFloat(durationTime)
         }  
+}
+/** 
+ * Funcion encargada de manejar la posicion de slide y video
+ * 
+ * 
+ * */
+function setVideoSlidePosition(){
+    if(phoneHeight<740){
+        document.getElementsByClassName('video_container')[0].style.top="-15%"
+        document.getElementById('playerView').childNodes[1].style.top="53%"
+    }else{
+        document.getElementsByClassName('video_container')[0].style.top="-18%"
+        document.getElementById('playerView').childNodes[1].style.top="53%"
+    }
 }
 
    
