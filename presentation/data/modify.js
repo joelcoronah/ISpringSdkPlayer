@@ -9,12 +9,9 @@ var ispringPresentationConnector = {};
 			window.addEventListener("message", receiveMessage, false);    
 
         };
-        function rollbackTenSeconds(timeNow,playerx){
-                if(timeNow>10){
-                    var timecito=playerx.presentation().slides().convertTimeToTimestamp(timeNow-10,false)
-                    var goBackten=playerx.view().playbackController().gotoTimestamp(timecito.Nb,timecito.Jr,timecito.gh,false)
-                    playerx.view().playbackController().play()
-                }else{
-                    playerx.view().playbackController().gotoFirstSlide(false)
-                }
+        function rollbackTenSeconds(timeNow,playerx){  
+            var timecito=playerx.presentation().slides().convertTimeToTimestamp(Math.max(0,timeNow-10),true)
+            //var goBackten=playerx.view().playbackController().gotoTimestamp(timecito.Nb,timecito.Jr,timecito.gh,false)
+            playerx.view().playbackController().gotoTimestamp(timecito.slideIndex(),timecito.stepIndex(),timecito.timeOffset(),true);
+
         }  

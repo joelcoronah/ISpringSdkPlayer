@@ -23206,16 +23206,14 @@
         }
         if(phoneWidth<767 && portrait==1 ){
             //phone
-            document.getElementsByClassName('universal_mini')[0].childNodes[1].style.opacity='1'
-            document.getElementsByClassName('universal_mini')[0].childNodes[2].style.opacity='1'
-            //document.getElementsByClassName('universal_mini')[0].childNodes[2].style.marginTop="10%"
-            //document.getElementsByClassName('universal_mini')[0].childNodes[2].style.marginBottom="0%"
-            document.getElementsByClassName('video_container')[0].style.top="-13%"
-            document.getElementById('playerView').childNodes[1].style.top="50%"
-            //document.getElementsByClassName('universal_mini')[0].childNodes[1].childNodes[1].style.marginBottom="50%"
-            //document.getElementsByClassName('universal_mini')[0].childNodes[1].childNodes[1].style.marginTop="50%"
-            bandPhone=1;
-            bandTablet=0;
+             document.getElementsByClassName('universal_mini')[0].childNodes[1].style.opacity='1'
+             document.getElementsByClassName('universal_mini')[0].childNodes[2].style.opacity='1'
+             //document.getElementsByClassName('universal_mini')[0].childNodes[2].style.marginTop="10%"
+             document.getElementsByClassName('video_container')[0].style.top="-10%"
+             document.getElementById('playerView').childNodes[1].style.top="49%"
+             //document.getElementsByClassName('universal_mini')[0].childNodes[1].childNodes[1].style.marginBottom="10%"
+             bandPhone=1;
+             bandTablet=0;
         }else{
             bandTablet=1;
         } 
