@@ -40064,9 +40064,12 @@ function arrayWhile(currentTime, durationTime,currentTimePresentation){
  * 
  * */
 function setVideoSlidePosition(){
-    if(phoneHeight<740){
-        document.getElementsByClassName('video_container')[0].style.top="-15%"
-        document.getElementById('playerView').childNodes[1].style.top="53%"
+    if(phoneHeight<600){
+        document.getElementsByClassName('video_container')[0].style.top="-13.75%"
+        document.getElementById('playerView').childNodes[1].style.top="50%"
+    }else if(phoneHeight>=600 && phoneHeight<750){
+        document.getElementsByClassName('video_container')[0].style.top="-14%"
+        document.getElementById('playerView').childNodes[1].style.top="51.5%"
     }else{
         document.getElementsByClassName('video_container')[0].style.top="-18%"
         document.getElementById('playerView').childNodes[1].style.top="53%"
