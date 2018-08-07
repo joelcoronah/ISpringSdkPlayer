@@ -23203,7 +23203,7 @@
         if (window.matchMedia("(orientation: landscape)").matches) {
            landscape=1;
         }
-        if(phoneWidth<767 && portrait==1 ){
+        if(phoneWidth<768 && portrait==1 ){
             //phone
             document.getElementsByClassName('universal_mini')[0].childNodes[1].style.opacity='1'
             document.getElementsByClassName('universal_mini')[0].childNodes[2].style.opacity='1'
@@ -23211,7 +23211,7 @@
             //document.getElementsByClassName('universal_mini')[0].childNodes[2].style.marginBottom="0%"
             document.getElementsByClassName('video_container')[0].style.position="absolute"
             document.getElementById('playerView').childNodes[1].style.position="absolute"
-            setVideoSlidePosition();
+            setVideoSlidePosition()
             //document.getElementsByClassName('universal_mini')[0].childNodes[1].childNodes[1].style.marginBottom="50%"
             //document.getElementsByClassName('universal_mini')[0].childNodes[1].childNodes[1].style.marginTop="50%"
             bandPhone=1;
@@ -23224,25 +23224,27 @@
             if(bandTablet==0 && portrait==1){
                 //phone like phone
                 document.querySelector('.universal_mini > .top_panel .show_video.component_container').style.display="none"
-                setVideoSlidePosition();
+                console.log('telefono')
+                setVideoSlidePosition()
+
                
             }else if(bandTablet==1 && landscape==1){
                 //tablet like tablet
                 document.getElementsByClassName('bottom_panel')[0].appendChild(document.querySelector('.universal_mini > .top_panel .show_video.component_container'))
                 document.querySelector('.universal_mini > .bottom_panel .show_video.component_container').style.left="unset"
                 document.querySelector('.universal_mini > .bottom_panel .show_video.component_container').style.right="45.25%" 
-               
+                console.log('tablet')
             }else if (bandTablet==0 && landscape==1){
                 //phone like tablet
                 document.getElementsByClassName('bottom_panel')[0].appendChild(document.querySelector('.universal_mini > .top_panel .show_video.component_container'))
                 document.querySelector('.universal_mini > .bottom_panel .show_video.component_container').style.left="unset"
                 document.querySelector('.universal_mini > .bottom_panel .show_video.component_container').style.right="45.25%" 
-              
+                console.log('telefono como tablet')
 
             }else if(bandTablet==1 && portrait==1){
                 //tablet like phone
                 document.querySelector('.universal_mini > .top_panel .show_video.component_container').style.display="none"
-                setVideoSlidePosition();
+                console.log('tablet como telefono')
             }
             bandCond=1;
         }  
@@ -40058,21 +40060,90 @@ function arrayWhile(currentTime, durationTime,currentTimePresentation){
             slideFinal=parseFloat(durationTime)
         }  
 }
+
 /** 
  * Funcion encargada de manejar la posicion de slide y video
  * 
  * 
  * */
 function setVideoSlidePosition(){
-    if(phoneHeight<600){
-        document.getElementsByClassName('video_container')[0].style.top="-13.75%"
-        document.getElementById('playerView').childNodes[1].style.top="50%"
-    }else if(phoneHeight>=600 && phoneHeight<750){
-        document.getElementsByClassName('video_container')[0].style.top="-14%"
-        document.getElementById('playerView').childNodes[1].style.top="51.5%"
-    }else{
-        document.getElementsByClassName('video_container')[0].style.top="-18%"
-        document.getElementById('playerView').childNodes[1].style.top="53%"
+     if(phoneWidth>=320 && phoneWidth<375){
+        if(phoneHeight==450){
+            document.getElementsByClassName('video_container')[0].style.top="-13%"
+            document.getElementById('playerView').childNodes[1].style.top="47%";       
+        }else if (phoneHeight>450 && phoneHeight<=485 ){
+            document.getElementsByClassName('video_container')[0].style.top="-11%"
+            document.getElementById('playerView').childNodes[1].style.top="47.5%"
+
+        }else if (phoneHeight>485 && phoneHeight<=495 ){
+            document.getElementsByClassName('video_container')[0].style.top="-11%"
+            document.getElementById('playerView').childNodes[1].style.top="48%"
+
+        }else if (phoneHeight>495 && phoneHeight<=505 ){
+            document.getElementsByClassName('video_container')[0].style.top="-11%"
+            document.getElementById('playerView').childNodes[1].style.top="48%"
+
+        }else if (phoneHeight>505 && phoneHeight<=515 ){
+            document.getElementsByClassName('video_container')[0].style.top="-11%"
+            document.getElementById('playerView').childNodes[1].style.top="49%"
+
+        }else if (phoneHeight>515 && phoneHeight<=525 ){
+            document.getElementsByClassName('video_container')[0].style.top="-11%"
+            document.getElementById('playerView').childNodes[1].style.top="48.5%"
+
+        }else if (phoneHeight>525 && phoneHeight<=535 ){
+            document.getElementsByClassName('video_container')[0].style.top="-11%"
+            document.getElementById('playerView').childNodes[1].style.top="49%"
+
+        }else if (phoneHeight>535 && phoneHeight<=545 ){
+            document.getElementsByClassName('video_container')[0].style.top="-11%"
+            document.getElementById('playerView').childNodes[1].style.top="49%"
+
+        }else if (phoneHeight>545 && phoneHeight<=555 ){
+            document.getElementsByClassName('video_container')[0].style.top="-11%"
+            document.getElementById('playerView').childNodes[1].style.top="49.5%"
+
+        }else if (phoneHeight>555 && phoneHeight<=575 ){
+            document.getElementsByClassName('video_container')[0].style.top="-11%"
+            document.getElementById('playerView').childNodes[1].style.top="49.5%"
+
+        }else if (phoneHeight>575 && phoneHeight<=595 ){
+            document.getElementsByClassName('video_container')[0].style.top="-11%"
+            document.getElementById('playerView').childNodes[1].style.top="50%"
+
+        }else if (phoneHeight>595 && phoneHeight<=615 ){
+            document.getElementsByClassName('video_container')[0].style.top="-11%"
+            document.getElementById('playerView').childNodes[1].style.top="50.5%"
+
+        }else if (phoneHeight>615 && phoneHeight<=635 ){
+            document.getElementsByClassName('video_container')[0].style.top="-11%"
+            document.getElementById('playerView').childNodes[1].style.top="51%"
+
+        }else if (phoneHeight>635 && phoneHeight<=655 ){
+            document.getElementsByClassName('video_container')[0].style.top="-11.25%"
+            document.getElementById('playerView').childNodes[1].style.top="49%"
+
+        }else if (phoneHeight>655 && phoneHeight<=675 ){
+            document.getElementsByClassName('video_container')[0].style.top="-11.25%"
+            document.getElementById('playerView').childNodes[1].style.top="52.25%"
+
+        }else if (phoneHeight>675 && phoneHeight<=695){
+            document.getElementsByClassName('video_container')[0].style.top="-11.25%"
+            document.getElementById('playerView').childNodes[1].style.top="52.25%"
+
+        }else if (phoneHeight>695 && phoneHeight<=715 ){
+            document.getElementsByClassName('video_container')[0].style.top="-11.25%"
+            document.getElementById('playerView').childNodes[1].style.top="53%"
+
+        }else if (phoneHeight>715 && phoneHeight<=735 ){
+            document.getElementsByClassName('video_container')[0].style.top="-11.75%"
+            document.getElementById('playerView').childNodes[1].style.top="53%"
+
+        }else if (phoneHeight>545 && phoneHeight<=555 ){
+            document.getElementsByClassName('video_container')[0].style.top="-11%"
+            document.getElementById('playerView').childNodes[1].style.top="49.5%"
+
+        }
     }
 }
 
