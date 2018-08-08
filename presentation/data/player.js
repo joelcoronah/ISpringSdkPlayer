@@ -40253,7 +40253,7 @@ function setVideoSlidePosition(){
 
         }else if (phoneHeight>735 && phoneHeight<=755 ){
             document.getElementsByClassName('video_container')[0].style.top="-13.5%"
-            document.getElementById('playerView').childNodes[1].style.top="50%"
+            document.getElementById('playerView').childNodes[1].style.top="52.75%"
         
         }else if (phoneHeight>755 && phoneHeight<=775 ){
             document.getElementsByClassName('video_container')[0].style.top="-13.5%"
