@@ -40119,32 +40119,32 @@ function setVideoSlidePosition(){
             document.getElementById('playerView').childNodes[1].style.top="50.5%"
 
         }else if (phoneHeight>615 && phoneHeight<=635 ){
-            document.getElementsByClassName('video_container')[0].style.top="-11%"
-            document.getElementById('playerView').childNodes[1].style.top="51%"
+            document.getElementsByClassName('video_container')[0].style.top="-10.75%"
+            document.getElementById('playerView').childNodes[1].style.top="50.5%"
 
         }else if (phoneHeight>635 && phoneHeight<=655 ){
-            document.getElementsByClassName('video_container')[0].style.top="-11.25%"
-            document.getElementById('playerView').childNodes[1].style.top="49%"
+            document.getElementsByClassName('video_container')[0].style.top="-10.75%"
+            document.getElementById('playerView').childNodes[1].style.top="50.5%"
 
         }else if (phoneHeight>655 && phoneHeight<=675 ){
-            document.getElementsByClassName('video_container')[0].style.top="-11.25%"
-            document.getElementById('playerView').childNodes[1].style.top="52.25%"
+            document.getElementsByClassName('video_container')[0].style.top="-10.75%"
+            document.getElementById('playerView').childNodes[1].style.top="50.25%"
 
         }else if (phoneHeight>675 && phoneHeight<=695){
-            document.getElementsByClassName('video_container')[0].style.top="-11.25%"
-            document.getElementById('playerView').childNodes[1].style.top="52.25%"
+            document.getElementsByClassName('video_container')[0].style.top="-11%"
+            document.getElementById('playerView').childNodes[1].style.top="50.5%"
 
         }else if (phoneHeight>695 && phoneHeight<=715 ){
-            document.getElementsByClassName('video_container')[0].style.top="-11.25%"
-            document.getElementById('playerView').childNodes[1].style.top="53%"
+            document.getElementsByClassName('video_container')[0].style.top="-10.75%"
+            document.getElementById('playerView').childNodes[1].style.top="50.5%"
 
         }else if (phoneHeight>715 && phoneHeight<=735 ){
-            document.getElementsByClassName('video_container')[0].style.top="-11.75%"
-            document.getElementById('playerView').childNodes[1].style.top="53%"
+            document.getElementsByClassName('video_container')[0].style.top="-9.5%"
+            document.getElementById('playerView').childNodes[1].style.top="51%"
 
         }else if (phoneHeight>735 && phoneHeight<=755 ){
-            document.getElementsByClassName('video_container')[0].style.top="-11.75%"
-            document.getElementById('playerView').childNodes[1].style.top="52.5%"
+            document.getElementsByClassName('video_container')[0].style.top="-10%"
+            document.getElementById('playerView').childNodes[1].style.top="50.5%"
 
         }else if (phoneHeight>755 && phoneHeight<=775 ){
             document.getElementsByClassName('video_container')[0].style.top="-11%"
