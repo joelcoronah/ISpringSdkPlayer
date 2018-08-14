@@ -15,3 +15,6 @@ var ispringPresentationConnector = {};
             playerx.view().playbackController().gotoTimestamp(timecito.slideIndex(),timecito.stepIndex(),timecito.timeOffset(),true);
 
         }  
+        window.onload=function() {
+            window.top.postMessage("mensaje",document.location.origin);
+        };
