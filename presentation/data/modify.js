@@ -14,8 +14,7 @@ var ispringPresentationConnector = {};
             //var goBackten=playerx.view().playbackController().gotoTimestamp(timecito.Nb,timecito.Jr,timecito.gh,false)
             playerx.view().playbackController().gotoTimestamp(timecito.slideIndex(),timecito.stepIndex(),timecito.timeOffset(),true);
 
-        }  
-         
+        }          
 
 
        
