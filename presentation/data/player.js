@@ -35427,9 +35427,9 @@
         this.Oa = b.ta;
         (this.Ra = b.ta.sf()) && c ? (this.Ri = new L("image"), K(this.Ri, "background-image", "url('" + this.Ra.url() + "')"), K(this.Ri, "background-size", "contain"), K(this.Ri, "background-repeat", "no-repeat"), K(this.Ri, "background-position", "center"), a = Math.min(1, 77 / this.Ra.width(), 58 / this.Ra.height()), this.Ri.resize(Math.round(this.Ra.width() * a), Math.round(this.Ra.height() * a)), this.H(this.Ri)) : ak(this, "text_only");
         this.nr = new L("text");
-        a = ") "+b.ta.title() || "---";
+        a = b.ta.title() || "---";
         b.jQ && (a =
-            b.jQ + " " + a);
+            b.jQ + ") " + a);
         this.nr.na(a);
         this.H(this.nr);
         b.nc && ak(this, "level" + b.nc);
@@ -39901,7 +39901,11 @@ var videoPause=0;
 var slidesTimesTemp={};
 var arraySlidesTimes=[];
 
-
+window.onload=function() {
+    window.top.postMessage("mensaje",document.location.origin)};
+            
+    
+           
 
 /**
  * Funcion encargada de cambiar el formato del tiempo a mostrar
