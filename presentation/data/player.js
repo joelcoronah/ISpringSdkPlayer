@@ -5334,8 +5334,6 @@
                     g = b ? .01 : .5;
                 e > g && !b && !this.Tc && !c ? this.uz(a) : Math.abs(e) > g && d.qA(a);
                 this.lb && !this.yb.playing() && this.yb.play()
-                console.log('yb ps')
-                console.log(this.yb)
             }
     };
     f.play = function(a) {
@@ -6265,8 +6263,6 @@
         /*LO ENCONTRE*/
         if (Cm(this)) {
             this.lb = !0;
-            console.log('fuente')
-            console.log(this)
             Tg && "VIDEO" == M(this).tagName && this.src() && !M(this).src && (M(this).src = this.src());
             var a = M(this).play();
             a && a["catch"](function(a) {
