@@ -3,8 +3,15 @@ var ispringPresentationConnector = {};
         {             
             function receiveMessage(event)
             {
-            var playercito =player.presentation().slides().convertTimestampToTime(player.view().playbackController().clock().timestamp(),false,false)
-            rollbackTenSeconds(playercito,player)
+                if(event.data=="2"){
+                    player.view().playbackController().gotoNextSlide(true);
+                }else if(event.data=="1"){
+                    player.view().playbackController().gotoPreviousSlide(true);
+                }else{
+                    var playercito =player.presentation().slides().convertTimestampToTime(player.view().playbackController().clock().timestamp(),false,false)
+                    rollbackTenSeconds(playercito,player)
+                }
+                
 			}
 			window.addEventListener("message", receiveMessage, false);    
 

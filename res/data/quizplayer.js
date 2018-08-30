@@ -38478,10 +38478,10 @@
         panelcito.insertBefore(prev,info);
         panelcito.insertBefore(next,info);
         document.getElementsByClassName('mini')[0].childNodes[1].childNodes[0].addEventListener("click", function(e){
-            window.top.postMessage("atras",document.location.origin);
+            window.top.postMessage("1",document.location.origin);
         });
         document.getElementsByClassName('mini')[0].childNodes[1].childNodes[1].addEventListener("click", function(e){
-            window.top.postMessage("avanzar",document.location.origin);
+            window.top.postMessage("2",document.location.origin);
         });
 
         if(panelcito){
